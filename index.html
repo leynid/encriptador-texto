@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./assets/AluraLogo.png" alt="Logo de Alura" class="logo">
+        <h1>Encriptador de Texto</h1>
+    </header>
+    <div class="container">
+        <div class="input-section">
+            <textarea id="textInput" placeholder="Ingresa el texto aquí..."></textarea>
+            <div class="warning-message">
+                <img src="https://img.icons8.com/?size=100&id=21063&format=png&color=000000" alt="Advertencia" class="warning-icon">
+                <p>¡Sólo letras minúsculas y sin acentos!</p>
+            </div>
+            <div class="button-group">
+                <button onclick="encryptText()">Encriptar</button>
+                <button onclick="decryptText()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="result-section">
+            <div id="resultArea">
+                <img id="lockImage" src="./assets/EncryptImg.png" alt="Candado" class="visible">
+                <p id="resultText" class="hidden">¡Ningún mensaje fue encontrado! Ingresa el texto que deseas encriptar o desencriptar.</p>
+            </div>
+            <div class="hidden-content">
+                <img id="lockIcon" src="./assets/EncryptImg.png" alt="Candado" class="hidden">
+                <p id="resultParagraph" class="hidden">¡Ningún mensaje fue encontrado! Ingresa el texto que deseas encriptar o desencriptar.</p>
+            </div>
+            <div class="button-group">
+                <button onclick="copyToClipboard()" class="hidden">Copiar</button>
+                <button id="resetButton" class="hidden">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Challenge Alura - Oracle ONE | Desarrollado por Leynid Rovaina</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: "Gruppo", sans-serif;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c0fe 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre el logo y el título */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header .logo {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Permite que el título ocupe el espacio restante */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Tamaño máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+}
+
+/* Sección de entrada y resultado */
+.input-section, .result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo de las secciones */
+    height: 600px; /* Altura fija para ambas secciones */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    margin: 10px;
+    overflow: hidden;
+    position: relative; /* Permite usar position: absolute en los botones */
+}
+
+#textInput {
+    font-family: "Gruppo", sans-serif;
+    font-size: 26px;
+    width: 100%;
+    height: 80%; /* Ajusta el área de entrada a un porcentaje fijo */
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    resize: none;
+}
+
+#resultArea {
+    width: 100%;
+    height: 80%; /* Ajusta el área de resultado a un porcentaje fijo */
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+#lockImage {
+    width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#resultText {
+    font-family: "Gruppo", sans-serif;
+    font-size: 26px;
+    width: 100%;
+    height: auto;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    word-wrap: break-word;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+#resultParagraph, #resultText {
+    font-size: 26px; /* Ajusta el tamaño de la fuente para que coincida con el tamaño del otro mensaje */
+}
+
+/* Botones */
+
+/* Alinear los botones */
+.button-group {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea verticalmente en el centro */
+    bottom: 20px; /* Posiciona los botones en la parte inferior de la sección */
+    position: absolute;/* Ajusta la distancia desde el borde inferior de la sección */
+}
+
+/* Ajustes para los botones */
+.input-section .button-group {
+    bottom: 20px; /* Asegura el espacio debajo de los botones en la sección de entrada */
+}
+
+.result-section .button-group {
+    bottom: 20px; /* Asegura el espacio arriba de los botones en la sección de resultados */
+}
+
+.button-group button {
+    font-family: "Gruppo", sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Pone la fuente en negrita */
+}
+
+/* Botones principales */
+.button-group button:not(#resetButton) {
+    background-color: #4a90e2; /* Azul vibrante para los botones principales */
+    color: #ffffff;
+}
+
+.button-group button:not(#resetButton):hover {
+    background-color: #357abd; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Botón de reinicio */
+#resetButton {
+    background-color: #f75c80; /* Rosa vibrante para resaltar */
+    color: #ffffff;
+}
+
+#resetButton:hover {
+    background-color: #d94468; /* Rosa más oscuro al pasar el mouse */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mensajes de advertencia */
+.warning-message {
+    display: flex;
+    font-family: "Gruppo", sans-serif;
+    font-size: 20px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.warning-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.warning-message p {
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-family: "Gruppo", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: auto; /* Empuja el footer hacia el fondo */
+}
+
+/* Ajustes responsivos */
+@media (min-width: 769px) {
+    .input-section, .result-section {
+        width: 48%; /* Ajusta el tamaño de las secciones en pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section, .result-section {
+        max-width: 90%;
+    }
+
+    #textInput, #resultArea {
+        height: 400px;
+    }
+
+    /* Evita el contenido recortado */
+    body {
+        overflow-y: auto;
+    }
+}
